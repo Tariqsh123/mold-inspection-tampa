@@ -2138,7 +2138,7 @@ header .navbar {
 header .navbar .navbar-brand img {
     -o-object-fit: scale-down;
     object-fit: scale-down;
-    width: 140px;
+    width: 80px;
 }
     header .navbar-collapse .navbar-nav {
         align-items: flex-start !important;
@@ -2275,16 +2275,37 @@ footer .social li a i:hover {
 
 section.main-banner {
     /* background: url(https://cdn.gulfpublisher.com/assets/frontend/images/bg/banner.webp) no-repeat; */
-    background-size: cover;
-    padding: 180px 0 70px
+    /* background-size: cover; */
+    padding: 180px 0 70px;
+    background-color: #251e57;
 }
 
 section.main-banner .h1 {
     max-inline-size: -moz-min-content;
     max-inline-size: min-content;
     max-width: 620px;
+    color: white;
     position: relative;
     font-weight: 900 !important;
+}
+section.main-banner p{
+    color: white;
+}
+section.main-banner .btn-order{
+    background-color: rgb(177, 209, 43);
+    color: #251e57 !important;
+}
+section.main-banner .btn-order:hover{
+    background-color: white;
+    color: #251e57 !important;
+}
+section.main-banner .btn-live{
+    background-color: white;
+    color: #251e57 !important;
+}
+section.main-banner .btn-live:hover{
+    background-color: white;
+    color: #251e57 !important;
 }
 .about-sec-two .h2 {
     font-weight: 900 !important;
@@ -2371,21 +2392,21 @@ section.main-banner .images-box img {
     width: 98px
 }
 section.about-area{
-    background-color: #251e57;
+    /* background-color: #251e57; */
     padding: 60px 10px !important;
 }
-section.about-area h2 ,section.about-area p{
+/* section.about-area h2 ,section.about-area p{
     color: white;
-}
+} */
 section.about-area .btn-live {
-    background-color: white;
-    color: #251e57;
-    border: 2px solid white !important;
+    background-color: #251e57;
+    color: #fff;
+    border: 2px solid #251e57 !important;
     transition:  all 0.3s !important;
 }
 section.about-area .btn-live:hover{
-    background-color: #251e57;
-    color: white !important;
+    background-color: #fff;
+    color: #251e57 !important;
 }
 section.about-area:after {
     /* background: url(https://cdn.gulfpublisher.com/assets/frontend/images/simple/about-before.webp) no-repeat; */
@@ -2410,7 +2431,9 @@ section.our-services .h2{
 }
 section.our-services .col-lg-4 img {
     background: #fff;
-    border-radius: 50px;
+    border-radius: 50%;
+    border: 1px solid #251e57;
+    padding: 10px;
     left: 0;
     margin: 0 auto;
     object-fit: scale-down;
@@ -3148,3 +3171,46 @@ h5 {
 
 
 
+
+.hero-image{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+@media(max-width:600px){
+    section.about-area .btn-call{
+        padding: 0 !important;
+
+    }
+}
+.before-after-image-main-container{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 10px;
+    padding-top: 0;
+}
+.before-after-image-main-container h2{
+    text-align: center;
+    width: 100%;
+}
+.before-after-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+.before-after-images img{
+    height: auto;
+    width: 320px;
+    border: 3px solid #251e57;
+}
