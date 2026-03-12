@@ -2133,12 +2133,12 @@ header .btn-order i {
         width: 80%
     }
 header .navbar {
-    height: 60px;
+    height: fit-content;
 }
 header .navbar .navbar-brand img {
     -o-object-fit: scale-down;
     object-fit: scale-down;
-    width: 80px;
+    width: 120px;
 }
     header .navbar-collapse .navbar-nav {
         align-items: flex-start !important;
@@ -2300,7 +2300,7 @@ section.main-banner .btn-order:hover{
     color: #251e57 !important;
 }
 section.main-banner .btn-live{
-    background-color: white;
+    background-color: white !important;
     color: #251e57 !important;
 }
 section.main-banner .btn-live:hover{
@@ -2429,18 +2429,37 @@ section.our-services .col-lg-4 {
 section.our-services .h2{
     font-weight: 900 !important;
 }
+section.our-services .col-lg-4 {
+    position: relative;
+}
+
 section.our-services .col-lg-4 img {
     background: #fff;
-    border-radius: 50%;
-    border: 1px solid #251e57;
-    padding: 10px;
+    padding: 8px;
+    width: 80px;           /* image size chota */
+    height: 80px;
     left: 0;
     margin: 0 auto;
     object-fit: scale-down;
     position: absolute;
     right: 0;
-    top: 0;
-    z-index: 2
+    top: 20px;
+    z-index: 2;
+}
+
+/* Outer border using before */
+section.our-services .col-lg-4::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #251e57;
+    z-index: 22;
+    border-radius: 50%;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 section.our-services .col-lg-4 .cards {
@@ -2776,21 +2795,21 @@ section.cta-banner .btn-call:hover i {
 }
 
 section.cta-banner img {
-    height: 190px;
-    -o-object-fit: scale-down;
-    object-fit: scale-down;
-    width: 150px
+    height: 110px;
+    /* -o-object-fit: scale-down; */
+    object-fit: contain;
+    width: auto
 }
 
 section.reviews-area {
     /* background: url(https://cdn.gulfpublisher.com/assets/frontend/images/bg/reviews-bg.webp) no-repeat; */
     /* background-size: cover */
-    background-color: #251e57;
+    /* background-color: #251e57; */
     padding: 60px 10px !important;
 }
-section.reviews-area h2,section.reviews-area p{
+/* section.reviews-area h2,section.reviews-area p{
     color: white;
-}
+} */
 .review-box p{
     color: #000 !important;
 }
@@ -2800,13 +2819,14 @@ section.reviews-area .reviews-slider {
 }
 
 section.reviews-area .review-box {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: rgb(177, 209, 43);
+    border: 1px solid #ddd !important;
     border-radius: 20px;
     padding: 10px 20px
 }
 section.reviews-area .review-box p{
     margin: 0 ;
+    color: white;
     padding: 0;
 }
 section.reviews-area .review-box .quote {
@@ -2848,14 +2868,14 @@ section.reviews-area .review-box .client-name span {
 }
 
 section.reviews-area .review-box .client-name span:first-child {
-    color: #251e57;
+    color: #fff;
     display: block;
     font-size: 20px;
     font-weight: 600
 }
 
 section.reviews-area .review-box .client-name span:nth-child(2) {
-    color: #000;
+    color: #fff;
     display: block;
     font-size: 16px
 }
@@ -2865,7 +2885,7 @@ section.reviews-area .review-box .stars {
 }
 
 section.reviews-area .review-box .stars:before {
-    color: rgb(177, 209, 43);
+    color: #251e57;
     content: "★★★★★"; /* filled stars unicode */
     font-size: x-large;
 }
@@ -2879,14 +2899,13 @@ section.reviews-area .review-box img {
     width: 80px
 }
 
-section.reviews-area .swiper-slide-active .review-box,
-section.reviews-area .swiper-slide-active .review-box img {
+section.reviews-area .swiper-slide-active .review-box{
     border-color: #251e57
 }
 
 section.content-area .text-box {
     background: #fff;
-    border: 1px solid #e3e3e3;
+    border: 1px solid #251e57;
     border-radius: 10px;
     padding: 30px 25px 5px
 }
@@ -3193,7 +3212,7 @@ h5 {
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
-    padding: 40px 10px;
+    padding: 40px 10px !important;
     padding-top: 0;
 }
 .before-after-image-main-container h2{
@@ -3205,6 +3224,7 @@ h5 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 40px 10px;
     flex-wrap: wrap;
     width: 100%;
     height: fit-content;
@@ -3213,4 +3233,18 @@ h5 {
     height: auto;
     width: 320px;
     border: 3px solid #251e57;
+}
+.hero-title ,.hero-title span{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.after-hero-left-image{
+    border-radius: 50%;
+    width: 600px;
+    height: auto;
+}
+@media(max-width:600px){
+ .after-hero-left-image{
+    width: 100%;
+    height: auto;
+}   
 }
