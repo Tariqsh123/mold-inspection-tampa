@@ -1912,11 +1912,14 @@ form.quote-form button .text-danger {
 
 @media (max-width:575px) {
     section.main-banner {
-        padding-top: 120px !important
+        padding-top: 200px !important
     }
 
     section.main-banner .h1:after {
         display: none
+    }
+    section.main-banner a{
+        font-size: small !important;
     }
 
     form.quote-form {
@@ -3195,6 +3198,8 @@ h5 {
     height: auto;
     width: 100%;
     object-fit: contain;
+    border: 3px solid rgb(177, 209, 43);
+    border-radius: 10px; 
 }
 @media(max-width:600px){
     section.about-area .btn-call{
@@ -3237,14 +3242,14 @@ h5 {
 .hero-title ,.hero-title span{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.after-hero-left-image{
+.after-hero-left-image {
     border-radius: 50%;
-    width: 600px;
+    width: 90%;
     height: auto;
 }
 @media(max-width:600px){
  .after-hero-left-image{
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 300px;
 }   
 }
